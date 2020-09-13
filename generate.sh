@@ -4,7 +4,7 @@ echo "generating server stubs"
 
 rm -rf server_out
 mkdir server_out
-protoc --gofast_out=plugins=grpc:server_out *.proto
+protoc --go_out=server_out --go-grpc_out=server_out *.proto
 echo "done generating server stubs"
 
 echo "generating client"

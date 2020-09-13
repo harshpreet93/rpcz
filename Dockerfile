@@ -13,7 +13,7 @@ RUN apt-get -y install wget unzip npm git
 RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VERSION}/protoc-${PROTOC_VERSION}-linux-x86_64.zip
 RUN unzip protoc-${PROTOC_VERSION}-linux-x86_64.zip
 
-RUN go get github.com/gogo/protobuf/protoc-gen-gofast
+RUN go get google.golang.org/protobuf/cmd/protoc-gen-go
 RUN go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
 RUN wget https://github.com/grpc/grpc-web/releases/download/${GRPC_WEB_VERSION}/protoc-gen-grpc-web-${GRPC_WEB_VERSION}-linux-x86_64
 RUN chmod +x protoc-gen-grpc-web-${GRPC_WEB_VERSION}-linux-x86_64
